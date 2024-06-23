@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+//חייב את הסיומת הזו כדי שפלירייט ידע במדובר בקובץ של טסט וידע לא להתעלם מהתיקייה הזו SPEC
+//נקליט סנריו כדי להתחיל
 
 test('test', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
