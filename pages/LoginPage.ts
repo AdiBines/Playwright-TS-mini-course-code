@@ -5,6 +5,9 @@ import { BasePage } from "./BasePage";
 
 
 export default class LoginPage extends BasePage {
+    validatePageUrl(BASE_URL: any) {
+        throw new Error("Method not implemented.");
+    }  //הורשה
 
     private usernameField: Locator;
     private passwordField: Locator;
@@ -13,13 +16,15 @@ export default class LoginPage extends BasePage {
     private default_username = process.env.STANDARD_USER as string;
     private default_password = process.env.CORRECT_PASSWORD as string;
 
+    //super חייב את הבסיס של האבא,ועליו ניתן להוסיף הרחבות! 
+    //.הורשה מאבא - צריך להתאים פה את הבנאי למבנה של הקלאס של האבא
     
     constructor(protected page: Page) {
-        super(page);
+        super(page);   
         this.usernameField = this.page.locator('[data-test="username"]');
         this.passwordField = this.page.locator('[data-test="password"]');
         this.loginButton = this.page.locator('[data-test="login-button"]');
-        this.errorMessage = this.page.locator('[data-test="error"]')
+        this.errorMessage = this.page.locator('[data-test="error"]')  //יש לנו את האלמנט שממנו צריך לחלץ את הטקסט ולבדוק אותו
     }
 
 
@@ -34,7 +39,7 @@ export default class LoginPage extends BasePage {
     }
 
     public async validateErrorMessage(errorMessage: ErrorMessages) {
-        await this.validateElementText(this.errorMessage, errorMessage.valueOf())
+        await this.validateElementText(this.errorMessage, errorMessage.valueOf())  //מחזירה את הערך 
     }
 
    
