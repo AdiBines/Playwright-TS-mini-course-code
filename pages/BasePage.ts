@@ -20,7 +20,8 @@ export abstract class BasePage {  //לא ניתן ליצור מופעים שלו
 
     }
 
-    protected async validateElementText(element: Locator, expectedText: string) {
+     //מעבירים את האלמנט ואת הטקסט לבדיקה שבאמת הגענו לאלמנט הנכון 
+    protected async validateElementText(element: Locator, expectedText: string) { 
         await test.step(`Validating that a correct elemet text is  ${expectedText}`, async () => {
             await expect(element).toContainText(expectedText);
         });

@@ -26,7 +26,7 @@ export default class ProductsPage extends BasePage {
             .locator('button').click();
     }
 
-    public async validateNumberOfItems(expectedNumberOfItems: string) {
+    public async validateNumberOfItems(expectedNumberOfItems: string) {  //בדיפולט שקוראים משהו מאתר אינטרנט זה נקרא לנו כסטרינג
         await this.validateElementText(this.shoppingCartElement, expectedNumberOfItems);
     }
 

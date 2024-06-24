@@ -5,9 +5,9 @@ import { BasePage } from "./BasePage";
 
 
 export default class LoginPage extends BasePage {
-    validatePageUrl(BASE_URL: any) {
-        throw new Error("Method not implemented.");
-    }  //הורשה
+    // validatePageUrl(BASE_URL: any) {
+    //     throw new Error("Method not implemented.");
+    // }  //הורשה
 
     private usernameField: Locator;
     private passwordField: Locator;
