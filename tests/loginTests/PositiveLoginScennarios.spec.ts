@@ -20,7 +20,7 @@ test.describe("Positive Login Scenarios", () => {
     })
 
     test("Login with standard_user", async() => {
-        await loginPage.loginToApplication(process.env.STANDARD_USER, process.env.CORRECT_PASSWORD);
+        await loginPage.loginToApplication(process.env.STANDARD_USER, process.env.CORRECT_PASSWORD); //התהליך שיריץ את התהליך
         await productsPage.validatePageUrl(ApplicationURL.INVENTORY_PAGE_URL);
     })
 
