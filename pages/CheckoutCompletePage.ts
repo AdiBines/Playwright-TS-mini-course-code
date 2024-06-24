@@ -19,4 +19,5 @@ export default class CheckoutCompletePage extends BasePage {
     public async goBackToProducts() {
         await this.clickElement(this.backHomeButton);
     }
+    //ADI BINES 
 }
